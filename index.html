@@ -4,8 +4,106 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Tour Of Dom</title>
+  <link rel="stylesheet" href="./styles/style.css">
+  <style>
+    h1{
+      color: rgb(223, 195, 41);
+    }
+    #food-title{
+      color: violet;
+    }
+  </style>
 </head>
 <body>
-  
+  <header>
+    <h1>this is my header no banner</h1>
+  </header>
+  <main>
+    <section id="puran-dhaka" class="songs">
+      <h2>welcome to dom</h2>
+      <p>Lorem ipsum dolor, sit amet <span>oli goli</span> consectetur adipisicing <span>elit.</span> Expedita, dignissimos.</p>
+
+      <h1 class="daddy">call me <span>dady</span>
+      </h1>
+    <ul>
+      <li class="international">Shoaib</li>
+      <li>Labib</li>
+      <li class="international">Sohail</li>
+      <li>Shoaib</li>
+      <li class="international">Labib</li>
+      <li>Sohail</li>
+    </ul>
+      <li class="foreign">Shoaib</li>
+      <li>Labib</li>
+      <li id="name">Sohail</li>
+    </ul>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Inventore, blanditiis.</p>
+    <h5>hello1</h5>
+    <h5>hello2</h5>
+    <h5>hello3</h5>
+  </section>
+  <section class="foods">
+    <h1 id="food-title">food i love</h1>
+    <ul>
+      <li>food1</li>
+      <li>food2</li>
+      <li>food3</li>
+      <li class="foreign">food4</li>
+      <li class="foreign">food5</li>
+      <li class="foreign">food6</li>
+      <li class="foreign">food7</li>
+    </ul>
+  </section>
+  </main>
+  <script>
+  //   console.log('HELLO FROM JAVASCRIPT');
+  //   console.log('HELLO bole cole gelo');
+  // console.log('document object model');
+      const student = {
+        name: 'abul mia',
+        id:121,
+        study: function(subject){
+          // console.log('studing subject:', subject);
+        }
+      }
+      const liCollectins = document.getElementsByTagName('li')
+      // console.log(liCollectins);
+    for(const li of liCollectins){
+      // console.log(li.innerText);
+    }
+
+
+    const allHeadings = document.getElementsByTagName('h1')
+    for(const heading of allHeadings){
+      // console.log(heading.innerText);
+    }
+    const pera = document.getElementsByTagName('p')
+    for(const para of pera){
+      // console.log(para);
+    }
+    const chotoHeading= document.getElementsByTagName('h5')
+    for(headFive of chotoHeading){
+      // console.log(headFive.innerText);
+    }
+    const foodTitleH1= document.getElementById('food-title')
+  console.log(foodTitleH1.innerText);
+  const nameElement = document.getElementById('name')
+  nameElement.innerText = 'Alvi'
+
+  const foreignElements = document.getElementsByClassName("foreign")
+for(const foreignEl of foreignElements){
+   console.log(foreignEl.innerText);
+  }
+ const spanEl = document.querySelectorAll('#puran-dhaka p span')
+ for(const span of spanEl){
+  console.log(span.innerText);
+ }
+ const names = document.getElementById('daddy')
+ console.log(names);
+ names.innerText = 'call me baby';
+ console.log(names);
+
+   </script>
+  <script src="./js/hello.js"></script>
 </body>
 </html>
